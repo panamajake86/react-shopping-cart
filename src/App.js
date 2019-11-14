@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import { Route } from 'react-router-dom';
 import data from './data';
+
+// Contexts
 import ProductContext from './contexts/ProductContext';
 import CartContext from './contexts/CartContext';
 
@@ -17,7 +19,7 @@ function App() {
 
 	const addItem = item => {
 		// add the given item to the cart
-		setCart(item);
+		setCart([...cart, item]);
 	};
 
 	return (
