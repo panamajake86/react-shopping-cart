@@ -14,18 +14,21 @@ import ShoppingCart from './components/ShoppingCart';
 function App() {
 	const [products] = useState(data);
 	const [cart, setCart] = useState([]);
-
-	console.log('state', cart)
-
+console.log(cart);
 	const addItem = item => {
 		// add the given item to the cart
 		setCart([...cart, item]);
+	};
+	const deleteItem = items => {
+		setCart(cart.filter(item => {
+			return ([...cart, !item[item.id]])
+		}));
 	};
 
 	return (
 		<div className="App">
 			<ProductContext.Provider value={{ products, addItem }}>
-				<CartContext.Provider value={{ cart }}>
+				<CartContext.Provider value={{ cart, deleteItem }}>
 					<Navigation cart={cart} />
 
 					{/* Routes */}
