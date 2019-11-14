@@ -17,7 +17,6 @@ function App() {
 
 	const addItem = item => {
 		// add the given item to the cart
-		// console.log('addItem', item);
 		setCart(item);
 	};
 
@@ -31,7 +30,7 @@ function App() {
 					<Route exact path="/" component={Products} />
 
 					<Route path="/cart" component={ShoppingCart} />
-					/>
+					
 				</CartContext.Provider>
 			</ProductContext.Provider>
 		</div>

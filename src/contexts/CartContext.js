@@ -1,11 +1,5 @@
 import React, { createContext } from 'react';
 
-const CartContext = () => {
-    return (
-        <>
-
-        </>
-    );
-};
+const CartContext = createContext();
 
 export default CartContext;
