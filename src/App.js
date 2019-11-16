@@ -19,10 +19,10 @@ console.log(cart);
 		// add the given item to the cart
 		setCart([...cart, item]);
 	};
-	const deleteItem = items => {
-		setCart(cart.filter(item => {
-			return ([...cart, !item[item.id]])
-		}));
+	const deleteItem = id => {
+		setCart(cart.filter(item => 
+			item.id !== id	
+		));
 	};
 
 	return (
